@@ -58,7 +58,7 @@ export function MobileMenu() {
       )}
 
       {/* Mobile menu */}
-      <div className={`fixed top-0 right-0 h-full w-4/5 max-w-xs bg-background border-l border-gray shadow-xl z-40 md:hidden transform transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+      <div className={`fixed inset-y-0 right-0 w-[280px] bg-background shadow-xl z-40 md:hidden transform transition-transform duration-300 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className="flex flex-col h-full p-6 relative">
           <div className="absolute top-6 right-6">
             <button
@@ -84,7 +84,7 @@ export function MobileMenu() {
             <span className="font-playfair font-semibold text-primary text-xl">Lolita</span>
           </div>
           
-          <div className="flex flex-col space-y-6 py-4">
+          <nav className="flex flex-col space-y-4 flex-grow">
             <Link 
               href="/#features" 
               className="text-foreground hover:text-primary transition-colors text-lg font-medium flex items-center gap-3"
@@ -145,8 +145,9 @@ export function MobileMenu() {
               </svg>
               Dashboard
             </Link>
-          </div>
-          <div className="mt-auto border-t border-gray pt-6 space-y-4">
+          </nav>
+          
+          <div className="mt-auto space-y-4">
             <SignInButton mode="modal">
               <button 
                 className="w-full border border-primary text-primary px-4 py-3 rounded-lg hover:bg-primary/5 transition flex justify-center items-center gap-2 font-medium"

@@ -9,7 +9,7 @@ export default function Navbar() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   
   const navLinks = [
-    { href: "/", label: "Dashboard" },
+    { href: "/dashboard", label: "Dashboard" },
     { href: "/dashboard/transactions", label: "Transactions" },
     { href: "/dashboard/income", label: "Income" },
     { href: "/dashboard/budget", label: "Budget" },
@@ -23,7 +23,7 @@ export default function Navbar() {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link href="/dashboard" className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2">
             <Image
               src="/logo.png"
               alt="Lolita Logo"
